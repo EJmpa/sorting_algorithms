@@ -21,13 +21,13 @@ void bitonic_sort(int *array, size_t size) {
                         int temp = array[i];
                         array[i] = array[ij];
                         array[ij] = temp;
-			print_array(array + start, seq);
+			print_array(array, size);
                     }
                     if ((i & k) != 0 && array[i] < array[ij]) {
                         int temp = array[i];
                         array[i] = array[ij];
                         array[ij] = temp;
-			print_array(array + start, seq);
+			print_array(array, size);
                     }
                 }
             }
