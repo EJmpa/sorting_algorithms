@@ -64,7 +64,7 @@ void swap_node_behind(listint_t **list, listint_t **tail, listint_t **shaker)
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *tail, *shaker;
-	int flag = 1;
+	int flag = 0;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
@@ -72,16 +72,16 @@ void cocktail_sort_list(listint_t **list)
 	for (tail = *list; tail->next != NULL;)
 		tail = tail->next;
 
-	while (flag == 1)
+	while (flag == 0)
 	{
-		flag = 0;
+		flag = 1;
 		for (shaker = *list; shaker != tail; shaker = shaker->next)
 		{
 			if (shaker->n > shaker->next->n)
 			{
 				swap_node_ahead(list, &tail, &shaker);
 				print_list((const listint_t *)*list);
-				flag = 1;
+				flag = 0;
 			}
 		}
 		for (shaker = shaker->prev; shaker != *list;
@@ -91,7 +91,7 @@ void cocktail_sort_list(listint_t **list)
 			{
 				swap_node_behind(list, &tail, &shaker);
 				print_list((const listint_t *)*list);
-				flag = 1;
+				flag = 0;
 			}
 		}
 	}
