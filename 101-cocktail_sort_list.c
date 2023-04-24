@@ -91,7 +91,7 @@ void cocktail_sort_list(listint_t **list)
 			{
 				swap_node_behind(list, &tail, &shaker);
 				print_list((const listint_t *)*list);
-				shaken_not_stirred = false;
+				flag = 1;
 			}
 		}
 	}
