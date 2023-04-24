@@ -35,5 +35,9 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
+/* Comparison direction macros for bitonic sort */
+#define UP 0
+#define DOWN 1
+
 
 #endif /*SORT_H*/
