@@ -1,1 +1,1 @@
-Sorting algoithms and Big O Project carried out by Joshua Monday and Chukwuemeka Chukwu
+Sorting algoithms and Big O Project carried out by Chukwuemeka Chukwu
